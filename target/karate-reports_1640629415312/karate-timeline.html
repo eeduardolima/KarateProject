@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/tests\/Get[1:8]","start":1640627867974,"end":1640627868723,"title":"src\/test\/java\/tests\/Get[1:8] 14:57:47.974-14:57:48.723 Get Demo 1"},{"id":2,"group":1,"content":"src\/test\/java\/tests\/Get[2:19]","start":1640627868728,"end":1640627868845,"title":"src\/test\/java\/tests\/Get[2:19] 14:57:48.728-14:57:48.845 Get Demo 2"},{"id":3,"group":1,"content":"src\/test\/java\/tests\/Get[3:26]","start":1640627868850,"end":1640627869002,"title":"src\/test\/java\/tests\/Get[3:26] 14:57:48.850-14:57:49.002 Get Demo 3"},{"id":4,"group":1,"content":"src\/test\/java\/tests\/Get[4:34]","start":1640627869006,"end":1640627869156,"title":"src\/test\/java\/tests\/Get[4:34] 14:57:49.006-14:57:49.156 Get Demo 4"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

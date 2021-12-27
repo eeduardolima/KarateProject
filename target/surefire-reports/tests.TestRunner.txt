@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: tests.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 15, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 9.653 sec <<< FAILURE!
+[2:11] Get Demo 1([tests/ConfigDemo1] Config Demo)  Time elapsed: 1.397 sec  <<< ERROR!
+com.intuit.karate.KarateException: status code was: 404, expected: 200, response time in milliseconds: 766, url: https://reqres.in/api/dev/users%3Fpage=2, response: 
+{}
+classpath:tests/ConfigDemo1.feature:14
+	at <feature>.: Then status 200 (classpath:tests/ConfigDemo1.feature:14:14)
+
